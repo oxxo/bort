@@ -25,6 +25,11 @@ Rails::Initializer.run do |config|
   # config.gem "bj"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "aws-s3", :lib => "aws/s3"
+  
+  # rake gems:unpack version handling is broken on rails 2.1.1
+  # See http://rails.lighthouseapp.com/projects/8994/tickets/1003-rake-gemsunpack-version-handling-broken
+  # I'll have to wait for that to be fixed to set the exact version number for validatable. 
+  config.gem 'validatable' #, :version => '1.6.7'
 
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
