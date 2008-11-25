@@ -2,12 +2,16 @@
 
 h1. Bort
 
-Bort is a base Rails 2.1 application that makes creating new projects easier and faster. BO!
+Bort is a base Rails 2.1 application that makes creating new projects easier and faster. Bort is developed and maintained by "Fudge Studios":http://www.fudgestudios.com, "Jim Neath":http://jimneath.org and "Matt Hall":http://matthall.wordpress.com
+
+If you have any suggestions for improvements then feel free to leave a request on "User Voice":http://bort.uservoice.com
 
 h2. Install
 
 * Download and unzip Bort
 * Edit the database.yml and the settings.yml files
+* Changed the default password in the bort migration
+* Edit the REST_AUTH_SITE_KEY in each of the environment files
 * Rake db:migrate
 * Have a brew and celebrate
 
@@ -66,8 +70,11 @@ over easily.
 
 h2. Capistrano Recipe
 
-Bort comes ready to rock capistrano. The recipe that is setup is based on using git and passenger. Edit as
-you see fit.
+Bort comes ready to rock capistrano. The recipe that is setup is based on using git and passenger. It's ready
+to go with multistage deployments. It deploys to the production config by default, so if you don't need it
+you can ignore it. Just update config/deploy/production.rb with your deployment settings.
+
+More info on capistrano-ext/multistage deployments can be found here: http://weblog.jamisbuck.org/2007/7/23/capistrano-multistage
 
 h2. Uses the Database for Sessions
 

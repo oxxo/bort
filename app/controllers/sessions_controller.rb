@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
   def destroy
     logout_killing_session!
     flash[:notice] = "You have been logged out."
-    redirect_back_or_default('/')
+    redirect_back_or_default(root_path)
   end
   
   def open_id_authentication
@@ -25,7 +25,7 @@ class SessionsController < ApplicationController
         successful_login
       else
         flash[:error] = result.message || "Sorry no user with that identity URL exists"
-        @rememer_me = params[:remember_me]
+        @remember_me = params[:remember_me]
         render :action => :new
       end
     end
@@ -49,7 +49,7 @@ class SessionsController < ApplicationController
   def successful_login
     new_cookie_flag = (params[:remember_me] == "1")
     handle_remember_cookie! new_cookie_flag
-    redirect_back_or_default('/')
+    redirect_back_or_default(root_path)
     flash[:notice] = "Logged in successfully"
   end
 
