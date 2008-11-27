@@ -2,7 +2,7 @@ module AdminView::ElegantPresentation
   # 
   #   TODO: add some documentation about this helper
   #  
-  def support_bar(title="Tareas de Soporte", &block)
+  def support_bar(title=t('views.support_tasks'), &block)
     content = capture(&block)
     concat('<div class="related_info">',      block.binding)
     concat("#{content_tag(:h3, title)}<ul>",  block.binding)
@@ -16,7 +16,8 @@ module AdminView::ElegantPresentation
   # 
   #   
   # 
-  def render_context_with(attr)
+
+  def render_context_with(attr)
     condition = controller.respond_to?("render_context_condition") ? controller.render_context_condition : true
     nspace  = controller.class.namespace ? "#{controller.class.namespace}_" : ""
     if condition
@@ -61,15 +62,15 @@ module AdminView::ElegantPresentation
   end
   
   def render_empty_msg
-    content_tag('div', 'No hay registros cargados', :class => 'msg')
+    content_tag('div', t('views.empty_dataset'), :class => 'msg')
   end
   
   def render_action_label
     case controller.action_name
       when "new"
-        label = "Nuevo registro de #{controller.controller_name.humanize}"
+        label = t(:new_record, :model => controller.controller_name.humanize)
       when "edit"
-        label = "Editando un registro de #{controller.controller_name.humanize}"      
+        label = t(:edit_record, :model => controller.controller_name.humanize)
     end
     content_tag('div', label, :class => 'section_label')
   end

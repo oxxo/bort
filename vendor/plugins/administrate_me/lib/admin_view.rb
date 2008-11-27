@@ -79,7 +79,7 @@ module AdminView
       end    
       content_tag('ul', html, :id => 'navs')
     else
-      raise Exception, "Debe definir los módulos para la aplicación. Ver: http://code.google.com/p/administrateme/wiki/ConfiguracionDeModulos"
+      raise Exception, t('errors.modules_not_defined')
     end
   end
   
@@ -134,10 +134,10 @@ module AdminView
   end
   
   def show_section_links
-    links  = link_to( "Agregar nuevo registro", 
+    links  = link_to(t('views.add_new_record'), 
                       path_to_index(:new))
     if controller.options[:excel]
-      links << link_to( "Descargar a Excel", eval("excel_#{controller.controller_name}_path"))
+      links << link_to(t('views.download_to_excel'), eval("excel_#{controller.controller_name}_path"))
     end
     links
   end
@@ -228,16 +228,13 @@ module AdminView
     html = ""
     if actions
       if actions.include?('show')
-        html << link_to(image_tag('show.png'), eval("#{name_space}_#{generate_path(item)}"), :title => 'ver más...')
-#        html << link_to(image_tag('admin_ui/show.png'), eval("#{name_space}_#{generate_path(item)}"), :title => 'ver más...')
+        html << link_to(image_tag('show.png'), eval("#{name_space}_#{generate_path(item)}"), :title => t('views.see_more'))
       end
       if actions.include?('edit')
-        html << link_to(image_tag('edit.png'), eval("edit_#{name_space}_#{generate_path(item)}"), :title => 'editar este registro')
-#        html << link_to(image_tag('admin_ui/edit.png'), eval("edit_#{name_space}_#{generate_path(item)}"), :title => 'editar este registro')
+        html << link_to(image_tag('edit.png'), eval("edit_#{name_space}_#{generate_path(item)}"), :title => t('views.edit_this_record'))
       end
       if actions.include?('destroy')
-        html << link_to(image_tag('destroy.png'), eval("#{name_space}_#{generate_path(item)}"), :confirm => 'El registro será eliminado definitivamente. ¿Desea continuar?', :method => :delete, :title => 'eliminar este registro')
-#        html << link_to(image_tag('admin_ui/destroy.png'), eval("#{name_space}_#{generate_path(item)}"), :confirm => 'El registro será eliminado definitivamente. ¿Desea continuar?', :method => :delete, :title => 'eliminar este registro')
+        html << link_to(image_tag('destroy.png'), eval("#{name_space}_#{generate_path(item)}"), :confirm => t('views.delete_confirm'), :method => :delete, :title => t('views.delete_this_record'))
       end
       unless html.blank?
         html = content_tag('div', html, :align => 'right')     
@@ -293,7 +290,7 @@ module AdminView
     html = ""
     lis  = ""
     unless filters.blank?
-      html << content_tag(:div, 'Filtrar registros por...', :class => 'f_header')     
+      html << content_tag(:div, t('views.filter_records_by'), :class => 'f_header')     
       filters.each do |filter|
         link = link_to(filter[:caption], filter[:url])
         lis << content_tag(:li, link, :class => current_class(filter[:name_space].to_s == controller.active_filter))
@@ -305,7 +302,7 @@ module AdminView
   deprecate :show_filters_for
 
   def filters_for(&block)
-    concat("<div class=\"f_header\">Filtrar registros por...</div>",  block.binding)
+    concat("<div class=\"f_header\">#{t('views.filter_by')}</div>",  block.binding)
     concat("<ul class=\"filters\">", block.binding)
     yield
     concat("</ul>",                  block.binding)
@@ -314,7 +311,7 @@ module AdminView
 
   def all_filters
     results = []
-    results << filter_by('Todos', :none)
+    results << filter_by(t('views.filter_show_all'), :none)
     controller.options[:filter_config].all_filters.each do |filter|
       results << filter_by(filter.label, filter.name)
     end
@@ -369,7 +366,7 @@ module AdminView
   end
   
   def link_to_more(ltmore)
-    html = link_to('administrar', ltmore)
+    html = link_to(t('views.admin'), ltmore)
     content_tag(:div, html, :class => 'more')
   end
   
