@@ -12,23 +12,32 @@
       :password     => "Password",
       :remember_me  => "Remember me",
 
-      :loginopenid  => "Login with OpenID",
-      :lostpassword => "Forgotten Password",
+      :login_openid  => "Login with OpenID",
+      :lost_password => "Forgotten Password",
 
       :login        => "Login",
       :logout       => "Logout",
       :signup       => "Sign In",
-      :logged        => "Logged in successfully"
+      :logged       => "Logged in successfully"
 
      },
 
-     :passwords => {
-       :title         => "Forgot Your Password?",
-       :formtitle     => "Enter Your Email Address",
-       :email         => "email",
-       :submitbutton  => "Submit"
+    :passwords => {
+      :title         => "Forgot Your Password?",
+      :form_title     => "Enter Your Email Address",
+      :email         => "email",
+      :submit_button  => "Submit"
 
-     }
+     },
+
+    :user_mailer  => {
+      :title              => "Your account has been created.",
+      :username           => "Username",
+      :activate_account    => "Visit this url to activate your account",
+      :account_activated  => "your account has been activated.  Welcome aboard!"
+
+
+    }
 
 
     }

@@ -1,7 +1,7 @@
-Your account has been created.
+<%=  t('user_mailer.title') %>
 
-Username: <%= @user.login %>
+<%=  t('user_mailer.username') %>: <%= @user.login %>
 
-Visit this url to activate your account:
+<%=  t('user_mailer.activate_account') %>:
 
 <%= @url %>

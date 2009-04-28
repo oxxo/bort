@@ -2,7 +2,7 @@
 <% form_for @password do |f| %>
   <%= f.error_messages %>
   <fieldset>
-    <legend><%= t('passwords.formtitle') %></legend>
+    <legend><%= t('passwords.form_title') %></legend>
     <ol>
       <li>
         <%= f.label :email, t('passwords.email') %>
@@ -11,6 +11,6 @@
     </ol>
   </fieldset>
   <div class="buttons">
-    <%= f.submit t('passwords.submitbutton') %>
+    <%= f.submit t('passwords.submit_button') %>
   </div>
 <% end %>

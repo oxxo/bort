@@ -4,32 +4,38 @@
     
     :sessions => {
       
-        :title         => "Login",
-        :paragraph     => "Bienvenido a esta maravillosa app sobre Rails...",
-        :details       => "Tus detalles",
-        :username      => "Usuario",
-        :password      => "Contraseña",
-        :remember_me   => "Recordar mis datos",
+        :title            => "Login",
+        :paragraph        => "Bienvenido a esta maravillosa app sobre Rails...",
+        :details          => "Tus detalles",
+        :username         => "Usuario",
+        :password         => "Contraseña",
+        :remember_me      => "Recordar mis datos",
 
-        :loginopenid   => "Entrar con OpenID",
-        :lostpassword  => "Olvidé mi Contraseña",
+        :login_openid     => "Entrar con OpenID",
+        :lost_password    => "Olvidé mi Contraseña",
 
-        :login         => "Entrar",
-        :logout        => "Salir",
-        :signup        => "Crear una Cuenta",
-        :logged        => "Loggeado con éxito",
+        :login            => "Entrar",
+        :logout           => "Salir",
+        :signup           => "Registrarse",
+        :logged           => "Loggeado con éxito",
 
     },
 
     :passwords => {
-       :title         => "Olvidaste tu Password?",
-       :formtitle     => "Ingrese su dirección de Email",
-       :email         => "Email",
-       :submitbutton  => "Enviar"
+       :title             => "Olvidó tu Password?",
+       :form_title        => "Ingrese su dirección de Email",
+       :email             => "Email",
+       :submit_button     => "Enviar"
 
      },
     
+    :user_mailer  => {
+      :title              => "Su cuenta fue creada.",
+      :username           => "Usuario",
+      :activate_account   => "Visite esta url para activar su cuenta",
+      :account_activated  => "su cuenta ha sido activada. Bienvenido a bordo!"
 
+    },
 
   
 

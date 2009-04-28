@@ -1,5 +1,5 @@
-<%= page_title t('sessions.login.title'), :h2 %>
-<p><%=  t('sessions.login.paragraph') %></p>
+<%= page_title t('sessions.title'), :h2 %>
+<p><%=  t('sessions.paragraph') %></p>
 <% form_tag session_path do %>
 	<fieldset>
 		<legend><%=  t('sessions.details') %></legend>
@@ -19,7 +19,7 @@
 		</ol>
 	</fieldset>
 	<fieldset>
-		<legend><%=  t('sessions.loginopenid') %></legend>
+		<legend><%=  t('sessions.login_openid') %></legend>
 		<ol>
 			<li>
 				<%= label_tag 'openid_url', 'OpenID URL' %>
@@ -29,6 +29,6 @@
 	</fieldset>
 	<div class="buttons">
 		<%= submit_tag t('sessions.login') %>
-		<%= link_to t('sessions.login.lostpassword'), forgot_password_path %>
+		<%= link_to t('sessions.lost_password'), forgot_password_path %>
 	</div>
 <% end -%>
