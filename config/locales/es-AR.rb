@@ -3,7 +3,7 @@
 
     
     :sessions => {
-      :login => {
+      
         :title         => "Login",
         :paragraph     => "Bienvenido a esta maravillosa app sobre Rails...",
         :details       => "Tus detalles",
@@ -19,12 +19,20 @@
         :signup        => "Crear una Cuenta",
         :logged        => "Loggeado con éxito",
 
-      },
+    },
+
+    :passwords => {
+       :title         => "Olvidaste tu Password?",
+       :formtitle     => "Ingrese su dirección de Email",
+       :email         => "Email",
+       :submitbutton  => "Enviar"
+
+     },
     
 
 
-  }
-  },
+  
+
 
     :date => {
       :formats => {

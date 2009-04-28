@@ -2,24 +2,24 @@
 <p><%=  t('sessions.login.paragraph') %></p>
 <% form_tag session_path do %>
 	<fieldset>
-		<legend><%=  t('sessions.login.details') %></legend>
+		<legend><%=  t('sessions.details') %></legend>
 		<ol>
 			<li>
-				<%= label_tag 'login', t('sessions.login.username') %>
+				<%= label_tag 'login', t('sessions.username') %>
 				<%= text_field_tag 'login', @login, :class => "text-box"  %>
 			</li>
 			<li>
-				<%= label_tag t('sessions.login.password') %>
+				<%= label_tag t('sessions.password') %>
 				<%= password_field_tag 'password', nil, :class => "text-box"  %>
 			</li>
 			<li>
 			  <%= check_box_tag 'remember_me', '1', @remember_me %>
-				<%= label_tag 'remember_me', t('sessions.login.remember_me') %>
+				<%= label_tag 'remember_me', t('sessions.remember_me') %>
 			</li>
 		</ol>
 	</fieldset>
 	<fieldset>
-		<legend><%=  t('sessions.login.loginopenid') %></legend>
+		<legend><%=  t('sessions.loginopenid') %></legend>
 		<ol>
 			<li>
 				<%= label_tag 'openid_url', 'OpenID URL' %>
@@ -28,7 +28,7 @@
 		</ol>
 	</fieldset>
 	<div class="buttons">
-		<%= submit_tag t('sessions.login.login') %>
+		<%= submit_tag t('sessions.login') %>
 		<%= link_to t('sessions.login.lostpassword'), forgot_password_path %>
 	</div>
 <% end -%>
