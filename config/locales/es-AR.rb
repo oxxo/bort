@@ -1,6 +1,31 @@
 {
   :'es' => {
 
+    
+    :sessions => {
+      :login => {
+        :title         => "Login",
+        :paragraph     => "Bienvenido a esta maravillosa app sobre Rails...",
+        :details       => "Tus detalles",
+        :username      => "Usuario",
+        :password      => "Contraseña",
+        :remember_me   => "Recordar mis datos",
+
+        :loginopenid   => "Entrar con OpenID",
+        :lostpassword  => "Olvidé mi Contraseña",
+
+        :login         => "Entrar",
+        :logout        => "Salir",
+        :signup        => "Crear una Cuenta",
+        :logged        => "Loggeado con éxito",
+
+      },
+    
+
+
+  }
+  },
+
     :date => {
       :formats => {
         :default      => "%e/%m/%Y",
