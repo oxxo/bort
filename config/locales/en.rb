@@ -39,7 +39,21 @@
       :confirm_password => "Confirm Password",
       :email            => "Email",
       :signup_title     => "Signup with OpenID",
-      :signup_button    => "Sign up"
+      :signup_button    => "Sign up",
+
+      #Controller
+
+      :failed_creation => "Sorry, something went wrong",
+      :complete => "Signup complete! Please sign in to continue.",
+      :blank_activation_code => "The activation code was missing. Please follow the URL from your email.",
+      :activation_code_mismatch => "We couldn't find a user with that activation code -- check your email? Or maybe you've already activated -- try signing in.",
+      :error_creating_account => "Sorry, there was an error creating your account",
+      :success => {
+        :thanks => "Thanks for signing up!",
+        :not_using_openid => "We're sending you an email with your activation code.",
+        :using_openid => " You can now login with your OpenID.",
+        }
+
 
 
     },

@@ -37,8 +37,21 @@
         :confirm_password => "Confirmar Password",
         :email            => "Email",
         :signup_title     => "Registrarse con OpenID",
-        :signup_button    => "Registrarse"
+        :signup_button    => "Registrarse",
 
+      #Controlador
+
+        :failed_creation => "Lo sentimos, algo salió mal",
+        :complete => "¡Registro completado! Por favor ingrese su usuario y contraseña para continuar.",
+        :blank_activation_code => "No se encontró el código de activación. Por favor use la URL que se envió a su email.",
+        :activation_code_mismatch => "No pudimos encontrar un usuario con ese código de activación -- compruebe su email. A lo mejor ya se activó -- intente acceder con su usuario y contraseña.",
+        :error_creating_account => "Lo sentimos, ocurrió un error creando su cuenta.",
+        :success => {
+          :thanks => "¡Gracias por registrarse!",
+          :not_using_openid => "Le estamos enviando un código de activación a su email.",
+          :using_openid => " Puede acceder ahora usando su OpenID.",
+
+        }
     },
 
     :openid  => {
