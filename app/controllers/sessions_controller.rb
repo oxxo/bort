@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
 
   def destroy
     logout_killing_session!
-    flash[:notice] = "You have been logged out."
+    flash[:notice] = I18n.translate('sessions.logged_out')
     redirect_back_or_default(root_path)
   end
   
@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
       if result.successful? && self.current_user = User.find_by_identity_url(identity_url)
         successful_login
       else
-        flash[:error] = result.message || "Sorry no user with that identity URL exists"
+        flash[:error] = result.message || I18n.translate('sessions.no_user')
         @remember_me = params[:remember_me]
         render :action => :new
       end
@@ -54,7 +54,7 @@ class SessionsController < ApplicationController
   end
 
   def note_failed_signin
-    flash[:error] = "Couldn't log you in as '#{params[:login]}'"
-    logger.warn "Failed login for '#{params[:login]}' from #{request.remote_ip} at #{Time.now.utc}"
+    flash[:error] = I18n.translate('sessions.fail', :login => params[:login])
+    logger.warn I18n.translate('logger.fail', :login => params[:login], :remote_ip => request.remote_ip, :time => Time.now.utc)
   end
 end

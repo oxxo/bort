@@ -4,6 +4,10 @@
 {
   :'en' => {
 
+    :logger => {
+       :fail  =>  "Failed login for '{{login}}' from '{{request.remote_ip}}' at '{{Time.now.utc}}'"
+    },
+
     :sessions => {
       :title        => "Login",
       :paragraph    => "Welcome to this wonderfull Rails app...",
@@ -18,7 +22,12 @@
       :login        => "Login",
       :logout       => "Logout",
       :signup       => "Sign In",
-      :logged       => "Logged in successfully"
+      :logged       => "Logged in successfully",
+      #Controllers
+      :logged_out   => "You have been logged out.",
+      :no_user      => "Sorry no user with that identity URL exists",
+      :fail         => "Couldn't log you in as '{{login}}'",
+
 
      },
 
@@ -50,7 +59,8 @@
       :email         => "Email",
       :submit_button => "Submit",
 
-      :link_change_password     => "A link to change your password has been sent to {{email}}", #Aqui iría el email destino
+      #Controllers
+      :link_change_password     => "A link to change your password has been sent to '{{email}}'", 
       :link_password_invalid    => "The change password URL you visited is either invalid or expired.",
       :password_updated         => "Password was successfully updated."
 

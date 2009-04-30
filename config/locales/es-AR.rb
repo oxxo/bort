@@ -1,6 +1,11 @@
 {
   :'es' => {
 
+
+    :logger => {
+       :fail  =>  "Inicio de session inválido para '{{login}}' desde '{{remote_ip}}' a las '{{time}}'"
+    },
+
     :sessions => {
       
         :title            => "Login",
@@ -17,6 +22,10 @@
         :logout           => "Salir",
         :signup           => "Registrarse",
         :logged           => "Loggeado con éxito",
+        #Controllers
+        :logged_out       => "Has salido con éxito.",
+        :no_user          => "Perdón, no existe un usuario con esa URL de identidad",
+        :fail             => "No se puede entrar como '{{login}}'",
 
     },
 
@@ -47,6 +56,7 @@
          :email           => "Email",
          :submit_button   => "Enviar",
 
+      #Controladores
          :link_change_password     => "Un link para cambiar tu password se envió a {{email}}.", #Aqui iría el email destino
          :link_password_invalid    => "La URL para cambiar el password que visitaste es inválido o expiró.",
          :password_updated         => "Password actualizado con éxito."
