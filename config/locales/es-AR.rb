@@ -1,7 +1,6 @@
 {
   :'es' => {
 
-    
     :sessions => {
       
         :title            => "Login",
@@ -21,25 +20,44 @@
 
     },
 
+    :users  =>  {
+        :page_title       => "Registrarse",
+        :details          => "Tus Detalles",
+        :username         => "Usuario",
+        :password         => "Password",
+        :confirm_password => "Confirmar Password",
+        :email            => "Email",
+        :signup_title     => "Registrarse con OpenID",
+        :signup_button    => "Registrarse"
+
+    },
+
+    :openid  => {
+        :missing          => "Perdón, No se encuentra el servidor de OpenID",
+        :invalid          => "Perdón, pero no parece ser un OpenID válido",
+        :canceled         => "Verificación OpenID cancelada",
+        :failed           => "Verificación OpenID Falló",
+        :setup_needed     => "Vefificación OpenID necesita configuración"
+    },
+
+
     :passwords => {
-       :title             => "Olvidó tu Password?",
-       :form_title        => "Ingrese su dirección de Email",
-       :email             => "Email",
-       :submit_button     => "Enviar"
+         :title           => "Olvidó tu Password?",
+         :form_title      => "Ingrese su dirección de Email",
+         :email           => "Email",
+         :submit_button   => "Enviar"
 
      },
     
     :user_mailer  => {
-      :title              => "Su cuenta fue creada.",
-      :username           => "Usuario",
-      :activate_account   => "Visite esta url para activar su cuenta",
-      :account_activated  => "su cuenta ha sido activada. Bienvenido a bordo!"
+         :title              => "Su cuenta fue creada.",
+         :username           => "Usuario",
+         :activate_account   => "Visite esta url para activar su cuenta",
+         :account_activated  => "su cuenta ha sido activada. Bienvenido a bordo!"
 
     },
 
   
-
-
     :date => {
       :formats => {
         :default      => "%e/%m/%Y",

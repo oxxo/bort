@@ -7,3 +7,8 @@ coverage
 db/*.sqlite3
 *.*~
 nbproject
+
+0001-Internacionalizacion-de-la-vista-Login.patch
+0002-Internacionalizada-la-vista-forgot_password.patch
+0003-Internacionalizados-los-mails-de-user_mailer.patch
+

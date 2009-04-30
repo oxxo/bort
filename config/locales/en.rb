@@ -22,11 +22,33 @@
 
      },
 
+    :users  =>  {
+      :page_title       => "Signup",
+      :details          => "Your Details",
+      :username         => "Username",
+      :password         => "Password",
+      :confirm_password => "Confirm Password",
+      :email            => "Email",
+      :signup_title     => "Signup with OpenID",
+      :signup_button    => "Sign up"
+
+
+    },
+
+
+    :openid  => {
+      :missing      => "Sorry, the OpenID server couldn't be found",
+      :invalid      => "Sorry, but this does not appear to be a valid OpenID",
+      :canceled     => "OpenID verification was canceled",
+      :failed       => "OpenID verification failed",
+      :setup_needed => "OpenID verification needs setup"
+    },
+
     :passwords => {
       :title         => "Forgot Your Password?",
-      :form_title     => "Enter Your Email Address",
-      :email         => "email",
-      :submit_button  => "Submit"
+      :form_title    => "Enter Your Email Address",
+      :email         => "Email",
+      :submit_button => "Submit"
 
      },
 
