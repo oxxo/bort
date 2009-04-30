@@ -45,7 +45,11 @@
          :title           => "Olvidó tu Password?",
          :form_title      => "Ingrese su dirección de Email",
          :email           => "Email",
-         :submit_button   => "Enviar"
+         :submit_button   => "Enviar",
+
+         :link_change_password     => "Un link para cambiar tu password se envió a {{email}}.", #Aqui iría el email destino
+         :link_password_invalid    => "La URL para cambiar el password que visitaste es inválido o expiró.",
+         :password_updated         => "Password actualizado con éxito."
 
      },
     
