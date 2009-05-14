@@ -3,85 +3,83 @@
 
 
     :logger => {
-       :fail  =>  "Inicio de session inválido para '{{login}}' desde '{{remote_ip}}' a las '{{time}}'"
+      :fail  =>  "Inicio de session inválido para '{{login}}' desde '{{remote_ip}}' a las '{{time}}'"
     },
 
     :sessions => {
       
-        :title            => "Login",
-        :paragraph        => "Bienvenido a esta maravillosa app sobre Rails...",
-        :details          => "Tus detalles",
-        :username         => "Usuario",
-        :password         => "Contraseña",
-        :remember_me      => "Recordar mis datos",
+      :title            => "Login",
+      :paragraph        => "Bienvenido a esta maravillosa app sobre Rails...",
+      :details          => "Tus detalles",
+      :username         => "Usuario",
+      :password         => "Contraseña",
+      :remember_me      => "Recordar mis datos",
 
-        :login_openid     => "Entrar con OpenID",
-        :lost_password    => "Olvidé mi Contraseña",
+      :login_openid     => "Entrar con OpenID",
+      :lost_password    => "Olvidé mi Contraseña",
 
-        :login            => "Entrar",
-        :logout           => "Salir",
-        :signup           => "Registrarse",
-        :logged           => "Loggeado con éxito",
-        #Controllers
-        :logged_out       => "Has salido con éxito.",
-        :no_user          => "Perdón, no existe un usuario con esa URL de identidad",
-        :fail             => "No se puede entrar como '{{login}}'",
+      :login            => "Entrar",
+      :logout           => "Salir",
+      :signup           => "Registrarse",
+      :logged           => "Ingresó con éxito",
+      #Controller
+      :logged_out       => "Has salido con éxito.",
+      :no_user          => "Perdón, no existe un usuario con esa URL de identidad",
+      :fail             => "No se puede entrar como '{{login}}'",
 
     },
 
     :users  =>  {
-        :page_title       => "Registrarse",
-        :details          => "Tus Detalles",
-        :username         => "Usuario",
-        :password         => "Password",
-        :confirm_password => "Confirmar Password",
-        :email            => "Email",
-        :signup_title     => "Registrarse con OpenID",
-        :signup_button    => "Registrarse",
+      :page_title       => "Registrarse",
+      :details          => "Tus Detalles",
+      :username         => "Usuario",
+      :password         => "Password",
+      :confirm_password => "Confirmar Password",
+      :email            => "Email",
+      :signup_title     => "Registrarse con OpenID",
+      :signup_button    => "Registrarse",
 
-      #Controlador
+      #Controller
 
-        :failed_creation => "Lo sentimos, algo salió mal",
-        :complete => "¡Registro completado! Por favor ingrese su usuario y contraseña para continuar.",
-        :blank_activation_code => "No se encontró el código de activación. Por favor use la URL que se envió a su email.",
-        :activation_code_mismatch => "No pudimos encontrar un usuario con ese código de activación -- compruebe su email. A lo mejor ya se activó -- intente acceder con su usuario y contraseña.",
-        :error_creating_account => "Lo sentimos, ocurrió un error creando su cuenta.",
-        :success => {
-          :thanks => "¡Gracias por registrarse!",
-          :not_using_openid => "Le estamos enviando un código de activación a su email.",
-          :using_openid => " Puede acceder ahora usando su OpenID.",
+      :failed_creation => "Lo sentimos, algo salió mal",
+      :complete => "¡Registro completado! Por favor ingrese su usuario y contraseña para continuar.",
+      :blank_activation_code => "No se encontró el código de activación. Por favor use la URL que se envió a su email.",
+      :activation_code_mismatch => "No pudimos encontrar un usuario con ese código de activación -- compruebe su email. A lo mejor ya se activó -- intente acceder con su usuario y contraseña.",
+      :error_creating_account => "Lo sentimos, ocurrió un error creando su cuenta.",
+      :success => {
+        :thanks => "¡Gracias por registrarse! ",
+        :not_using_openid => "Le estamos enviando un código de activación a su email.",
+        :using_openid => " Puede acceder ahora usando su OpenID.",
 
-        }
+      }
     },
 
-    :openid  => {
-        :missing          => "Perdón, No se encuentra el servidor de OpenID",
-        :invalid          => "Perdón, pero no parece ser un OpenID válido",
-        :canceled         => "Verificación OpenID cancelada",
-        :failed           => "Verificación OpenID Falló",
-        :setup_needed     => "Vefificación OpenID necesita configuración"
-    },
-
-
+   
     :passwords => {
-         :title           => "Olvidó tu Password?",
-         :form_title      => "Ingrese su dirección de Email",
-         :email           => "Email",
-         :submit_button   => "Enviar",
+      :title           => "Olvidó tu Password?",
+      :form_title      => "Ingrese su dirección de Email",
+      :email           => "Email",
+      :submit_button   => "Enviar",
 
-      #Controladores
-         :link_change_password     => "Un link para cambiar tu password se envió a {{email}}.", #Aqui iría el email destino
-         :link_password_invalid    => "La URL para cambiar el password que visitaste es inválido o expiró.",
-         :password_updated         => "Password actualizado con éxito."
+      #Controller
+      :link_change_password     => "Un link para cambiar tu password se envió a {{email}}.", #Aqui iría el email destino
+      :link_password_invalid    => "La URL para cambiar el password que visitaste es inválido o expiró.",
+      :password_updated         => "Password actualizado con éxito."
 
-     },
+    },
     
     :user_mailer  => {
-         :title              => "Su cuenta fue creada.",
-         :username           => "Usuario",
-         :activate_account   => "Visite esta url para activar su cuenta",
-         :account_activated  => "su cuenta ha sido activada. Bienvenido a bordo!"
+      :title              => "Su cuenta fue creada.",
+      :username           => "Usuario",
+      :activate_account   => "Visite esta url para activar su cuenta",
+      :account_activated  => "su cuenta ha sido activada. Bienvenido a bordo!"
 
+    },
+
+    :password_mailer  => {
+      :reset              => "tu password se actualizó con éxito.",
+      :forgot             => "puedes cambiar tu password en esta URL:"
+      
     },
 
   

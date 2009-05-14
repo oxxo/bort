@@ -78,8 +78,6 @@
       :link_password_invalid    => "The change password URL you visited is either invalid or expired.",
       :password_updated         => "Password was successfully updated."
 
-      
-
      },
 
     :user_mailer  => {
@@ -88,9 +86,13 @@
       :activate_account    => "Visit this url to activate your account",
       :account_activated  => "your account has been activated.  Welcome aboard!"
 
+    },
+
+    :password_mailer  => {
+      :reset              => "your password has been reset.",
+      :forgot           => "you can change your password at this URL:"
 
     }
-
 
     }
 }
